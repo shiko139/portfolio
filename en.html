@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://shiko139.github.io/portfolio/en.html">
+<link rel="alternate" hreflang="en" href="https://shiko139.github.io/portfolio/en.html">
+<link rel="alternate" hreflang="ar" href="https://shiko139.github.io/portfolio/ar.html">
+<link rel="alternate" hreflang="x-default" href="https://shiko139.github.io/portfolio/">
+<title>Shady Ehab | AI Solutions for Business</title>
+<meta name="description" content="Shady Ehab's portfolio: AI-powered digital transformation for businesses, including chatbots, booking systems, CRM, payments, and full automation.">
+<style>
+:root {
+  --ink: #251f21;
+  --ink-2: #585254;
+  --hairline: #eae9ea;
+  --teal: #73a89a;
+  --teal-dark: #3d6b5f;
+  --page: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Segoe UI", Tahoma, "Noto Kufi Arabic", "Cairo", Arial, sans-serif;
+  background: #f4efec;
+  color: var(--ink);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 20px 16px 48px; }
+section { margin-bottom: 44px; }
+.label { font-size: 12.5px; color: var(--ink-2); margin-bottom: 4px; }
+h2 { font-size: 23px; font-weight: 800; margin-bottom: 18px; }
+
+/* Hero */
+.hero {
+  position: relative; overflow: hidden;
+  border-radius: 26px; padding: 48px 22px 42px;
+  text-align: center; color: #fdfbfa;
+  background: linear-gradient(140deg, #251f21 0%, #2f3a38 45%, #2b4a43 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 14s ease-in-out infinite;
+}
+@keyframes gradientShift { 0%,100% { background-position: 0% 40%; } 50% { background-position: 100% 60%; } }
+.orb { position: absolute; border-radius: 50%; filter: blur(46px); opacity: .5; pointer-events: none; }
+.orb-a { width: 220px; height: 220px; background: #73a89a; top: -70px; right: -60px; animation: floaty 11s ease-in-out infinite; }
+.orb-b { width: 170px; height: 170px; background: #4d7f72; bottom: -50px; left: -40px; animation: floaty 13s ease-in-out infinite reverse; }
+.orb-c { width: 110px; height: 110px; background: #a8cfc4; top: 40%; left: 12%; opacity: .28; animation: floaty 9s ease-in-out infinite 1.2s; }
+@keyframes floaty { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(24px,-20px) scale(1.12); } }
+.photo-wrap { position: relative; width: 150px; height: 150px; margin: 0 auto 18px; }
+.photo-ring {
+  position: absolute; inset: -7px; border-radius: 50%;
+  background: conic-gradient(from 0deg, #73a89a, #d8efe8, #73a89a, #3d6b5f, #73a89a);
+  animation: spin 5s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.photo {
+  position: relative; width: 150px; height: 150px; border-radius: 50%;
+  object-fit: cover; object-position: 50% 22%;
+  border: 4px solid #251f21; display: block;
+}
+.eyebrow { font-size: 13px; letter-spacing: .04em; color: #b9d9cf; margin-bottom: 6px; }
+h1 { font-size: 40px; line-height: 1.15; font-weight: 800; margin-bottom: 10px; }
+.rotator {
+  min-height: 32px; font-size: 17px; font-weight: 700; color: #9fd0c0;
+  opacity: 0; transform: translateY(8px); transition: opacity .35s ease, transform .35s ease;
+}
+.rotator.show { opacity: 1; transform: translateY(0); }
+.hero-sub { max-width: 580px; margin: 12px auto 24px; font-size: 14.5px; line-height: 1.9; color: #e6e1de; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 0 22px; border-radius: 999px;
+  font-size: 14.5px; font-weight: 700; text-decoration: none; cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.btn-primary { background: var(--teal); color: #17211e; box-shadow: 0 6px 18px rgba(115,168,154,.35); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(115,168,154,.45); background: #82b6a8; }
+.btn-ghost { background: rgba(255,255,255,.08); color: #f3f0ee; border: 1px solid rgba(255,255,255,.22); }
+.btn-ghost:hover { transform: translateY(-2px); background: rgba(255,255,255,.16); }
+
+/* Reveal */
+.reveal.armed { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.armed.in { opacity: 1; transform: translateY(0); }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.stat {
+  background: rgba(115,168,154,.1); border: 1px solid rgba(115,168,154,.35);
+  border-radius: 16px; padding: 18px 10px 14px; text-align: center;
+}
+.stat-num { display: block; font-size: 30px; font-weight: 800; color: var(--teal-dark); }
+.stat-label { display: block; margin-top: 6px; font-size: 12.5px; line-height: 1.6; color: var(--ink-2); }
+.note { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
+.hint { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); text-align: center; }
+
+/* Services */
+.services { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 700px) { .services { grid-template-columns: 1fr 1fr; } }
+.card {
+  display: flex; align-items: flex-start; gap: 12px; width: 100%;
+  text-align: start; background: var(--page);
+  border: 1px solid var(--hairline); border-radius: 16px; padding: 16px;
+  cursor: pointer; font: inherit; color: var(--ink);
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.card:hover { border-color: var(--teal); box-shadow: 0 8px 22px rgba(37,31,33,.08); transform: translateY(-2px); }
+.card-icon { font-size: 24px; line-height: 1.4; }
+.card-body { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.card-title { font-weight: 800; font-size: 15px; }
+.card-blurb { font-size: 13px; color: var(--ink-2); line-height: 1.7; }
+.card-detail {
+  font-size: 13.5px; line-height: 1.9; max-height: 0; opacity: 0; overflow: hidden;
+  transition: max-height .35s ease, opacity .35s ease, margin .35s ease; margin-top: 0;
+}
+.card.open .card-detail { max-height: 240px; opacity: 1; margin-top: 8px; }
+.card.open { border-color: var(--teal); background: rgba(115,168,154,.07); }
+.card-toggle {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 700; color: var(--teal-dark);
+  background: rgba(115,168,154,.16); transition: transform .25s ease;
+}
+.card.open .card-toggle { transform: rotate(180deg); }
+
+/* Marquee */
+.marquee { overflow: hidden; border-radius: 14px; border: 1px solid var(--hairline); padding: 14px 0; background: rgba(115,168,154,.06); }
+.marquee-track { display: flex; gap: 12px; width: max-content; animation: scrollX 18s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes scrollX { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.chip {
+  white-space: nowrap; font-size: 14px; font-weight: 700; color: var(--teal-dark);
+  background: var(--page); border: 1px solid rgba(115,168,154,.45);
+  border-radius: 999px; padding: 8px 20px;
+}
+
+/* Case study */
+.case { border: 1px solid rgba(115,168,154,.4); background: rgba(115,168,154,.07); border-radius: 16px; padding: 18px; margin-bottom: 16px; }
+.case-lead { margin: 0 0 10px; font-size: 14.5px; line-height: 1.9; font-weight: 700; }
+.case-list { margin: 0; padding-inline-start: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 13.5px; line-height: 1.8; }
+.gallery { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
+.g-item { flex: 0 0 84%; scroll-snap-align: center; }
+@media (min-width: 700px) { .g-item { flex-basis: 430px; } }
+.g-item img { width: 100%; border-radius: 14px; border: 1px solid var(--hairline); display: block; cursor: zoom-in; }
+.g-cap { font-size: 12px; color: var(--ink-2); margin-top: 6px; direction: ltr; text-align: start; line-height: 1.7; }
+.pvideo { width: 100%; border-radius: 16px; border: 1px solid var(--hairline); display: block; background: #17211e; margin-top: 4px; }
+.lightbox { position: fixed; inset: 0; background: rgba(10,10,10,.92); display: none; align-items: center; justify-content: center; z-index: 60; cursor: zoom-out; padding: 14px; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 94%; border-radius: 10px; }
+
+/* Steps */
+.steps { list-style: none; display: flex; flex-direction: column; gap: 10px; counter-reset: step; }
+.step {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--page); border: 1px solid var(--hairline);
+  border-radius: 14px; padding: 14px 16px; font-size: 14px; line-height: 1.9;
+}
+.step::before {
+  counter-increment: step; content: counter(step);
+  flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 800; color: #fdfbfa; background: var(--teal-dark);
+}
+
+/* Experience / tools / certs */
+.exp { list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 1.9; }
+.exp li { position: relative; padding-inline-start: 18px; }
+.exp li::before { content: ""; position: absolute; inset-inline-start: 0; top: 12px; width: 7px; height: 7px; border-radius: 50%; background: var(--teal); }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; direction: ltr; justify-content: flex-start; }
+.tool {
+  font-size: 12.5px; font-weight: 700; color: var(--ink-2);
+  border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 14px;
+  transition: color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.tool:hover { color: var(--teal-dark); border-color: var(--teal); transform: translateY(-2px); }
+details.certs { margin-top: 16px; border: 1px solid var(--hairline); border-radius: 14px; padding: 12px 16px; font-size: 13.5px; }
+details.certs summary { cursor: pointer; font-weight: 700; color: var(--teal-dark); min-height: 44px; display: flex; align-items: center; }
+details.certs ul { margin: 10px 0 4px; padding-inline-start: 20px; display: flex; flex-direction: column; gap: 8px; line-height: 1.8; }
+
+/* Contact */
+.contact {
+  display: flex; flex-wrap: wrap; gap: 20px; align-items: center;
+  background: linear-gradient(140deg, #251f21, #2b4a43);
+  border-radius: 20px; padding: 24px; color: #f3f0ee;
+}
+.contact-photo {
+  width: 92px; height: 92px; border-radius: 50%;
+  object-fit: cover; object-position: 50% 22%; border: 3px solid var(--teal);
+}
+.contact-info { flex: 1; min-width: 220px; }
+.contact-line { margin-bottom: 8px; font-size: 14px; line-height: 1.9; }
+.contact-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.contact-ctas .btn { min-height: 44px; padding: 0 18px; font-size: 13.5px; }
+
+footer { text-align: center; font-size: 12.5px; color: var(--ink-2); margin-top: 8px; }
+
+@media (max-width: 480px) {
+  .hero { padding: 36px 16px 32px; }
+  h1 { font-size: 32px; }
+  .stats { grid-template-columns: 1fr; }
+  .stat { display: flex; align-items: center; gap: 12px; text-align: start; padding: 14px 16px; }
+  .stat-num { font-size: 26px; }
+  .stat-label { margin-top: 0; }
+}
+
+/* Language switch */
+.lang-switch {
+  position: fixed; top: 12px; inset-inline-end: 12px; z-index: 70;
+  background: rgba(37,31,33,.8); color: #fdfbfa; text-decoration: none;
+  font-size: 12.5px; font-weight: 700; padding: 6px 16px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25); backdrop-filter: blur(6px);
+}
+.lang-switch:hover { background: rgba(37,31,33,.95); }
+</style>
+</head>
+<body>
+<a class="lang-switch" href="ar.html" hreflang="ar" lang="ar">العربية</a>
+<div class="wrap">
+
+  <section class="hero">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="photo-wrap">
+      <div class="photo-ring"></div>
+      <img class="photo" src="photo.jpg" alt="Shady Ehab">
+    </div>
+    <p class="eyebrow">AI Engineer · AI solutions for business</p>
+    <h1>Shady Ehab</h1>
+    <p class="rotator show" id="rotator">Turns any business from paper-based to fully digital</p>
+    <p class="hero-sub">Not just an AI engineer; he helps any business go fully digital: bookings, payments, chatbots, and operating systems, all up, running, and connected together.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="https://wa.me/201289383391?text=Hi+Shady%2C+I+saw+your+portfolio+and+I%27d+like+to+talk+about+a+project." target="_blank" rel="noreferrer">Message on WhatsApp</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/shady-ehab-82909728a" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Results in numbers</p>
+    <h2>Work that gets measured, not just talk</h2>
+    <div class="stats">
+      <div class="reveal"><div class="stat"><span class="stat-num" data-to="30" data-suffix="%" dir="ltr">30%</span><span class="stat-label">Improvement in operational efficiency</span></div></div>
+      <div class="reveal"><div class="stat"><span class="stat-num" data-to="25" data-suffix="%" dir="ltr">25%</span><span class="stat-label">Reduction in costs</span></div></div>
+      <div class="reveal"><div class="stat"><span class="stat-num" data-to="100" data-suffix="+" dir="ltr">100+</span><span class="stat-label">Hours of manual work saved monthly</span></div></div>
+    </div>
+    <p class="note">These numbers come from his current work results, as written in his CV.</p>
+  </section>
+
+  <section>
+    <p class="label">Services</p>
+    <h2>What he builds for your business</h2>
+    <div class="services" id="services"></div>
+    <p class="hint">Click any service to see its details.</p>
+  </section>
+
+  <section>
+    <p class="label">Case study</p>
+    <h2>RevoKlinik Business: a complete operating system</h2>
+    <div class="case reveal">
+      <p class="case-lead">He built a full operations hub for RevoKlinik: one system he designed and implemented from scratch, from a brand-new lead all the way to invoices and support, everything in one place.</p>
+      <ul class="case-list">
+        <li>Full sales pipeline with follow-up automation</li>
+        <li>Structured onboarding for new clients</li>
+        <li>Follow-up and client-success system for existing clients</li>
+        <li>Invoices, subscriptions, and payments</li>
+        <li>Routing support requests to the right teams</li>
+        <li>Dashboards and reports for every department</li>
+        <li>Demo environment with dummy data only, no real data</li>
+      </ul>
+    </div>
+    <div class="gallery" dir="ltr" id="gallery"></div>
+    <p class="note">Real screens from the system: sales pipeline, funnels, automation, chatbot, and dashboards. Click any image to enlarge it.</p>
+  </section>
+
+  <section>
+    <p class="label">Another case study</p>
+    <h2>PetRetain: a complete AI system for pet businesses</h2>
+    <div class="case reveal">
+      <p class="case-lead">He built PetRetain: a comprehensive AI system for pet shops and clinics that replies and books on its own and brings clients back.</p>
+      <ul class="case-list">
+        <li>Replies to client inquiries and books automatically on WhatsApp and email</li>
+        <li>Marketing on autopilot: client segmentation and ready-made campaigns, with AI replying to responses and booking</li>
+        <li>Automatically asks clients for reviews</li>
+        <li>Analytics pipeline for inquiry stages: new, details, price sent, and booking confirmed</li>
+        <li>AI insights that surface problems clearly, like: "inquiries stall after the price is sent"</li>
+      </ul>
+    </div>
+    <video class="pvideo reveal" controls preload="none" poster="poster.jpg" src="demo.mp4"></video>
+    <p class="note">Full system demo in 4 minutes: automatic replies and booking, marketing on autopilot, and analytics dashboards.</p>
+  </section>
+
+  <section>
+    <p class="label">Platforms</p>
+    <h2>Where do your bots live? Everywhere</h2>
+    <div class="marquee" dir="ltr"><div class="marquee-track" id="marquee"></div></div>
+    <p class="note">A smart chatbot that replies and takes orders on every platform your clients use every day.</p>
+  </section>
+
+  <section>
+    <p class="label">How he works</p>
+    <h2>From the first call to launch</h2>
+    <ol class="steps">
+      <li class="step reveal">He listens: how your business runs today and what is wasting time and money.</li>
+      <li class="step reveal">He designs the solution: a clear plan with tools that fit your budget and workload.</li>
+      <li class="step reveal">He builds and connects: the systems, bots, and automation get built and tested with you step by step.</li>
+      <li class="step reveal">He delivers and follows up: full launch, training for your team, and follow-up after delivery.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="label">Background</p>
+    <h2>Experience and credentials behind the work</h2>
+    <ul class="exp reveal">
+      <li><strong>AI Business Automation Specialist, ALTECH-eg</strong> (January 2025 to present): builds n8n workflows, integrated business systems, and automatic reports for real company work every day.</li>
+      <li><strong>Sprints Ambassador</strong> (October 2025 to present): supports the student tech community and takes part in learning programs.</li>
+      <li><strong>Data Analysis Trainee, Digital Egypt Pioneers Initiative (DEPI)</strong> (June to December 2025): hands-on training in Excel, SQL, Python, and data analysis.</li>
+      <li><strong>Computer and Communications Engineering student, Fayoum University</strong> (expected class of 2028).</li>
+    </ul>
+    <div class="tools reveal" id="tools"></div>
+    <details class="certs reveal">
+      <summary>8 recognized certificates, click to view</summary>
+      <ul id="certs"></ul>
+    </details>
+  </section>
+
+  <section>
+    <p class="label">Contact</p>
+    <h2>Have a business? Start here</h2>
+    <div class="contact reveal">
+      <img class="contact-photo" src="photo.jpg" alt="Shady Ehab">
+      <div class="contact-info">
+        <p class="contact-line">Fastest way to reach him: a WhatsApp message to <bdi dir="ltr">+20 128 938 3391</bdi></p>
+        <p class="contact-line">Based in Fayoum, Egypt, and works with any business online.</p>
+        <div class="contact-ctas">
+          <a class="btn btn-primary" href="https://wa.me/201289383391?text=Hi+Shady%2C+I+saw+your+portfolio+and+I%27d+like+to+talk+about+a+project." target="_blank" rel="noreferrer">Send a WhatsApp message</a>
+          <a class="btn btn-ghost" href="mailto:shadyehabtolpa139@gmail.com">Email</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/shady-ehab-82909728a" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://www.facebook.com/share/1EHUfzyxKT/" target="_blank" rel="noreferrer">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Shady Ehab · AI solutions for business · 2026</footer>
+</div>
+
+<script>
+var services = [
+  { icon: '🚀', title: 'Business digital transformation', blurb: 'From paper and manual work to one connected system', detail: 'He starts by understanding how your business runs step by step, then builds you a complete AI-powered digital system: everything recorded, everything connected, without your work stopping for a single day.' },
+  { icon: '💬', title: 'Chatbots for every platform', blurb: 'WhatsApp, Instagram, Facebook, Gmail, TikTok, YouTube', detail: 'A smart bot that answers your customers\' questions at any time, takes orders, and forwards the important messages to you. It works on every platform your customers actually use.' },
+  { icon: '📅', title: 'Complete booking systems', blurb: 'From the first booking to the final confirmation and reminder', detail: 'A full booking system from A to Z: the client books on their own, gets automatic confirmations and reminders, and you see everything from one place. No calls, no hassle.' },
+  { icon: '🤝', title: 'CRM and client management', blurb: 'Every client and every conversation in one place', detail: 'Complete CRM setup: lead tracking from the first message to closing, an organized pipeline, and automatic follow-ups so no client ever slips through.' },
+  { icon: '💳', title: 'Payments and invoicing', blurb: 'Online collection and automatic invoices', detail: 'Connect online payments to your business: the client pays online, the invoice goes out by itself, and every transaction is recorded with zero manual work.' },
+  { icon: '⚙️', title: 'Workflow automation', blurb: 'Connecting your tools and systems together', detail: 'Building workflows that link forms, emails, sheets, and APIs together. Routine work that used to take hours now happens in seconds.' },
+  { icon: '🏭', title: 'Operations systems for companies', blurb: 'Maintenance, supply chains, and HR', detail: 'Custom systems for maintenance management, supply chain tracking, and HR work: requests, approvals, and reports, all digital and tracked moment by moment.' },
+  { icon: '📊', title: 'Data analysis and reports', blurb: 'Your business numbers, clear in front of you', detail: 'Dashboards and automatic reports that pull your business data into one place, so you know what is happening and make decisions based on numbers, not gut feeling.' }
+];
+var platforms = ['WhatsApp', 'Instagram', 'Facebook', 'Gmail', 'TikTok', 'YouTube'];
+var tools = ['n8n', 'GoHighLevel', 'Make', 'Python', 'SQL', 'Power BI', 'Tableau', 'APIs', 'Machine Learning', 'Excel'];
+var certs = [
+  'Supervised Machine Learning — DeepLearning.AI / Coursera',
+  'Data Analysis with Python — IBM',
+  'AI Career Essentials (AICE) — ALX & Mastercard Foundation',
+  'Claude 101 — Anthropic',
+  'Data Analyst Specialist - Digital Egypt Pioneers Initiative (DEPI)',
+  'Programming Fundamentals Diploma — Route Academy',
+  'Vibe Coding, Gold Recognition — Lovable',
+  'Generative AI for Business — DataCamp'
+];
+var heroLines = [
+  'Turns any business from paper-based to fully digital',
+  'Builds chatbots that reply to customers 24/7',
+  'Creates booking systems from A to Z',
+  'Connects every business tool into one system'
+];
+
+var servicesEl = document.getElementById('services');
+services.forEach(function (s, i) {
+  var card = document.createElement('button');
+  card.type = 'button';
+  card.className = 'card';
+  card.setAttribute('aria-expanded', 'false');
+  card.innerHTML = '<span class="card-icon" aria-hidden="true">' + s.icon + '</span>' +
+    '<span class="card-body"><span class="card-title"></span><span class="card-blurb"></span><span class="card-detail"></span></span>' +
+    '<span class="card-toggle" aria-hidden="true">+</span>';
+  card.querySelector('.card-title').textContent = s.title;
+  card.querySelector('.card-blurb').textContent = s.blurb;
+  card.querySelector('.card-detail').textContent = s.detail;
+  var revealWrap = document.createElement('div');
+  revealWrap.className = 'reveal';
+  revealWrap.appendChild(card);
+  servicesEl.appendChild(revealWrap);
+  card.addEventListener('click', function () {
+    var isOpen = card.classList.toggle('open');
+    card.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    card.querySelector('.card-toggle').textContent = isOpen ? '−' : '+';
+  });
+});
+
+var marqueeEl = document.getElementById('marquee');
+platforms.concat(platforms).forEach(function (p) {
+  var chip = document.createElement('span');
+  chip.className = 'chip';
+  chip.textContent = p;
+  marqueeEl.appendChild(chip);
+});
+
+var toolsEl = document.getElementById('tools');
+tools.forEach(function (t) {
+  var el = document.createElement('span');
+  el.className = 'tool';
+  el.textContent = t;
+  toolsEl.appendChild(el);
+});
+
+var certsEl = document.getElementById('certs');
+certs.forEach(function (c) {
+  var li = document.createElement('li');
+  li.textContent = c;
+  certsEl.appendChild(li);
+});
+
+var workImages = [
+  { src: 'work-1.jpg', cap: 'Organized sales pipeline and CRM with client follow-up automation' },
+  { src: 'work-2.jpg', cap: 'All-in-one system: CRM, funnel, and automation in one platform' },
+  { src: 'work-3.jpg', cap: 'A professional funnel that turns leads into sales, with a results dashboard' },
+  { src: 'work-4.jpg', cap: 'AI-powered system: chatbot, analytics, and integration with every platform' },
+  { src: 'work-5.jpg', cap: 'Dashboards, client conversations, and marketing campaigns from systems he built' }
+];
+var galleryEl = document.getElementById('gallery');
+var lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.innerHTML = '<img alt="Enlarged work sample">';
+lightbox.addEventListener('click', function () { lightbox.classList.remove('open'); });
+document.body.appendChild(lightbox);
+workImages.forEach(function (w) {
+  var item = document.createElement('div');
+  item.className = 'g-item';
+  var img = document.createElement('img');
+  img.src = w.src;
+  img.alt = w.cap;
+  img.loading = 'lazy';
+  img.addEventListener('click', function () {
+    lightbox.querySelector('img').src = w.src;
+    lightbox.classList.add('open');
+  });
+  var cap = document.createElement('div');
+  cap.className = 'g-cap';
+  cap.textContent = w.cap;
+  item.appendChild(img);
+  item.appendChild(cap);
+  galleryEl.appendChild(item);
+});
+
+var rotator = document.getElementById('rotator');
+var heroIndex = 0;
+setInterval(function () {
+  rotator.classList.remove('show');
+  setTimeout(function () {
+    heroIndex = (heroIndex + 1) % heroLines.length;
+    rotator.textContent = heroLines[heroIndex];
+    rotator.classList.add('show');
+  }, 350);
+}, 3200);
+
+var revealIO = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      revealIO.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(function (el) {
+  el.classList.add('armed');
+  revealIO.observe(el);
+});
+
+var counterIO = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) return;
+    var el = entry.target;
+    counterIO.unobserve(el);
+    var to = parseInt(el.getAttribute('data-to'), 10);
+    var suffix = el.getAttribute('data-suffix');
+    var t0 = performance.now();
+    var duration = 1500;
+    function tick(t) {
+      var p = Math.min(1, (t - t0) / duration);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * eased) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    el.textContent = '0' + suffix;
+    requestAnimationFrame(tick);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num').forEach(function (el) { counterIO.observe(el); });
+</script>
+</body>
+</html>
